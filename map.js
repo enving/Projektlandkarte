@@ -9,9 +9,21 @@ const projects = [
         description: "Beschreibung des Projekts 1",
         coordinates: [49.646, 6.597],
         address: "Musterstraße 1, 12345 Stadt"
-    }
-    // Weitere Projekte hier hinzufügen
+    },
+    // Neue Projektstandorte hinzufügen
+    // ... bestehende Standorte ...
 ];
+
+// Neue Projektstandorte hinzufügen
+for (let i = 2; i <= 201; i++) {
+    projects.push({
+        id: i,
+        name: `Projekt ${i}`,
+        description: `Dies ist die Beschreibung für Projekt ${i}.`,
+        coordinates: [49.646 + (i * 0.01), 6.597 + (i * 0.01)], // Beispielkoordinaten
+        address: `Beispielstraße ${i}, 12345 Stadt`
+    });
+}
 
 function initMap() {
     map = L.map('map').setView([49.646, 6.597], 8);
