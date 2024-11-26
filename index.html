@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interaktive Projektlandkarte mit OpenStreetMap">
+    <title>Projektlandkarte</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Projektlandkarte</h1>
+    </header>
+    
+    <main>
+        <div id="map"></div>
+        <div id="project-info" class="project-panel">
+            <h2>Projektinformationen</h2>
+            <div id="project-details"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> - Powered by OpenStreetMap</p>
+    </footer>
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="map.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html> 
